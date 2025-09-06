@@ -1,5 +1,4 @@
 # ClaseV
-#Clase5
 
 import sys
 import os
@@ -33,43 +32,68 @@ class SistemaDocentes(QMainWindow):
         self.cargar_datos()
         
         self.setStyleSheet("""
-    QMainWindow { background-color: #ff69b4; }  /* Fondo rosa */
-    
+ 
+    QMainWindow { 
+        border-image: url('c:/Users/florp/OneDrive/Escritorio/interfaz/app.png') 0 0 0 0 stretch stretch; 
+    }
+
     QGroupBox {
         font-weight: bold; 
-        border: 2px solid #000000;   /* Bordes negros */
-        border-radius: 8px; margin: 10px; padding-top: 15px;
+        border: 2px solid #ffffff;
+        border-radius: 8px; 
+        margin: 10px; 
+        padding-top: 25px;
+        font-size: 16px;
+        color: #ffffff;
     }
     QGroupBox::title {
-        subcontrol-origin: margin; left: 10px;
-        padding: 0 10px 0 10px; color: #111111;  /* Negro oscuro */
+        subcontrol-origin: margin; 
+        left: 15px;
+        padding: 4px 12px;
+        background-color: rgba(0,0,0,0.7);
+        border: 1px solid #ffffff;
+        border-radius: 6px;
+        font-size: 14px;
+        font-weight: bold;
+        color: #ffffff;
     }
 
     QPushButton {
-        background-color: #ffffff;   /* Botones blancos */
-        color: #000000;              /* Texto negro */
-        border: 2px solid #000000;
-        padding: 8px 16px;
+        background-color: #222222;
+        color: #ffffff;
+        border: 2px solid #ffffff;
+        padding: 10px 18px;
         border-radius: 6px;
         font-weight: bold;
+        font-size: 14px;
     }
-    QPushButton:hover { background-color: #f8f9fa; }
-    QPushButton:pressed { background-color: #e9ecef; }
+    QPushButton:hover { background-color: #444444; }
+    QPushButton:pressed { background-color: #666666; }
 
     QLineEdit, QComboBox {
-        padding: 8px; border: 1px solid #000000;
-        border-radius: 6px; background-color: white;
+        padding: 8px;
+        border: 1px solid #ffffff;
+        border-radius: 6px;
+        background-color: #111111;
+        font-size: 14px;
+        color: #ffffff;
     }
-    QLineEdit:focus, QComboBox:focus { border: 2px solid #000000; }
+    QLineEdit:focus, QComboBox:focus { border: 2px solid #ffffff; }
 
     QListWidget, QTextEdit {
-        border: 1px solid #000000;
+        border: 1px solid #ffffff;
         border-radius: 6px;
-        background-color: white;
+        background-color: #111111;
+        font-size: 14px;
+        color: #ffffff;
+    }
+    
+    QLabel {
+    font-size: 16px;    
+    font-weight: bold;    
+    color: #000000;
     }
 """)
-
-
 
 
     #Interfaz
@@ -311,6 +335,7 @@ class SistemaDocentes(QMainWindow):
             f"Categoría: {datos[7]}"
         )
         self.detalles_text.setPlainText(detalles)
+        
 
    
     def agregar_docente(self):
