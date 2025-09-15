@@ -24,7 +24,7 @@ class SistemaDocentes(QMainWindow):
         # Archivo donde se guardarán los datos
         self.archivo_datos = "docentes.txt"
 
-        # Estado de edición (None si estamos agregando)
+        # Estado de edición 
         self.item_en_edicion = None
 
         # Configurar interfaz
